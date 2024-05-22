@@ -135,7 +135,7 @@ class UDP {
   ///
   /// Returns a [Stream] that can be listened to.
   Stream<Datagram?> asStream({Duration? timeout}) {
-    _streamController ??= StreamController<Datagram>();
+    _streamController ??= StreamController<Datagram?>();
 
     _udpBroadcastStream ??= (_streamController as StreamController<Datagram?>)
         .stream
